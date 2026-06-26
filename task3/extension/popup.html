@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* Pretendard Web Font */
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+    body {
+      width: 280px;
+      margin: 0;
+      padding: 16px;
+      background-color: #f6e0db; /* Peach Paper */
+      color: #000000;
+      font-family: 'Pretendard', sans-serif;
+      box-sizing: border-box;
+      letter-spacing: -0.03em;
+    }
+
+    /* Outlined Container Card */
+    .popup-container {
+      background-color: #ffffff;
+      border: 2px solid #000000;
+      border-radius: 20px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+    }
+
+    .header svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #000000;
+      stroke-width: 2.5px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #000000;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    /* Pill-shaped Link Buttons */
+    .btn-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 47px;
+      border: 2px solid #000000;
+      background-color: #ffffff;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: background-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-link:hover {
+      background-color: #ace2df; /* Mint Wash */
+      transform: scale(1.02);
+    }
+
+    .btn-link.netflix:hover {
+      background-color: #ef724f; /* Ember Orange */
+      color: #ffffff;
+    }
+
+    .btn-link.tving:hover {
+      background-color: #e7db4c; /* Sunbeam Yellow */
+    }
+
+    /* Instruction list in Mint Card shape */
+    .instructions {
+      background-color: #ffffff;
+      border: 2px dashed #000000;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .instructions ol {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .instructions li {
+      margin-bottom: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      opacity: 0.5;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <svg viewBox="0 0 100 100">
+        <path d="M 15 35 L 85 35 L 85 65 L 15 65 Z" stroke-linejoin="round"/>
+        <path d="M 30 35 Q 35 42 35 50 Q 35 58 30 65" />
+        <path d="M 70 35 Q 65 42 65 50 Q 65 58 70 65" />
+      </svg>
+      <h1 class="title">Poster Exporter</h1>
+    </div>
+    
+    <p class="desc">아래의 OTT 페이지로 이동하여 시청 기록을 내보내세요!</p>
+    
+    <a href="https://www.netflix.com/viewingactivity" target="_blank" class="btn-link netflix">
+      🍿 넷플릭스 내보내기
+    </a>
+    
+    <a href="https://www.tving.com/my/history" target="_blank" class="btn-link tving">
+      📺 티빙 내보내기
+    </a>
+
+    <div class="instructions">
+      <ol>
+        <li>이동한 페이지에서 <b>로그인</b>을 완료합니다.</li>
+        <li>화면에 표시되는 <b>'Poster Archive용 CSV 다운로드'</b> 버튼을 누릅니다.</li>
+        <li>받은 CSV 파일을 달력 앱에 업로드합니다.</li>
+      </ol>
+    </div>
+    
+    <div class="footer">Poster Archive v1.0</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

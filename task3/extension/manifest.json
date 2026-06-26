@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Poster Archive Exporter",
+  "version": "1.0",
+  "description": "넷플릭스와 티빙의 시청 기록을 Poster Archive 달력용 CSV 파일로 내보냅니다.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.netflix.com/viewingactivity*",
+        "https://www.netflix.com/*/viewingactivity*",
+        "https://www.tving.com/my/history*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

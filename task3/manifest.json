@@ -1,0 +1,23 @@
+{
+  "short_name": "PosterCal",
+  "name": "Poster Calendar - 콘텐츠 시청 기록 아카이브",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#f6e0db",
+  "theme_color": "#ef724f",
+  "display": "standalone",
+  "orientation": "portrait"
+}
